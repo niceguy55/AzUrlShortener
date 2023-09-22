@@ -12,7 +12,27 @@
           "allowedRoles": ["admin"]
         },
         {
-          "route": "/api/*",
+          "route": "/api/UrlArchive",
+          "methods": ["GET", "POST"],
+          "allowedRoles": ["admin"]
+        },
+        {
+          "route": "/api/UrlClickStatsByDay",
+          "methods": ["GET", "POST"],
+          "allowedRoles": ["admin"]
+        },
+        {
+          "route": "/api/UrlCreate",
+          "methods": ["GET", "POST"],
+          "allowedRoles": ["admin"]
+        },
+        {
+          "route": "/api/UrlList",
+          "methods": ["GET", "POST"],
+          "allowedRoles": ["admin"]
+        },
+        {
+          "route": "/api/UrlUpdate",
           "methods": ["GET", "POST"],
           "allowedRoles": ["admin"]
         },
