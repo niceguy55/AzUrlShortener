@@ -1,6 +1,13 @@
 @inject IJSRuntime jsRuntime
 
 
+@code {
+  protected override async Task OnInitialized()
+  {
+    await jsRuntime.InvokeVoidAsync("redirectToShorturl");
+  }
+}
+
 <section>
     <div class="container">
         <div class="row">
@@ -19,12 +26,3 @@
     
 </section>
 
-@code {
-  protected override async Task OnAfterRenderAsync(bool firstRender)
-  {
-    if (firstRender)
-    {
-      await jsRuntime.InvokeVoidAsync("redirectToShorturl");
-    }
-  }
-}
