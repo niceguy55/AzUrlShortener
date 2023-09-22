@@ -2,7 +2,7 @@
 
 
 @code {
-  protected override async Task OnInitialized()
+  protected override void OnInitialized()
   {
     await jsRuntime.InvokeVoidAsync("redirectToShorturl");
   }
