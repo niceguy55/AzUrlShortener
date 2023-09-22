@@ -16,3 +16,10 @@
     </div>
     
 </section>
+
+<script>
+    let path = window.location.pathname;
+    if (path) {
+        window.location = '/api' + encodeURIComponent(path);
+    }
+</script>
