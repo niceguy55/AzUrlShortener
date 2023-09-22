@@ -4,6 +4,10 @@
     },
     "routes": [
         {
+          "route": "/t/*",
+          "rewrite": "/api/"
+        },
+        {
           "route": "/urlmanager*",
           "allowedRoles": ["admin"]
         },
