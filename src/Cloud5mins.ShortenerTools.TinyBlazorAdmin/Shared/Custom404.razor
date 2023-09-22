@@ -24,10 +24,7 @@
   {
     if (firstRender)
     {
-      let path = window.location.pathname.replace('/', '');
-      if (path) {
-        await jsRuntime.InvokeVoidAsync('redirectToShorturl', path);
-      }
+      await jsRuntime.InvokeVoidAsync('redirectToShorturl');
     }
   }
 }

@@ -1,3 +1,6 @@
-function redirectToShorturl(id) {
-	window.location = '/api/' + id;
+function redirectToShorturl() {
+	let path = window.location.pathname;
+	if (path) {
+		window.location = '/api' + path;
+	}
 }
