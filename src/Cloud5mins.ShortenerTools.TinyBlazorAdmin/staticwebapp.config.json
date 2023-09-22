@@ -5,7 +5,7 @@
     "routes": [
         {
           "route": "/t/*",
-          "rewrite": "/api/"
+          "redirect": "/api/"
         },
         {
           "route": "/urlmanager*",
