@@ -1,3 +1,5 @@
+@inject IJSRuntime jsRuntime
+
 
 <section>
     <div class="container">
@@ -17,12 +19,15 @@
     
 </section>
 
-@section Scripts
-{
-<script>
-    let path = window.location.pathname;
-    if (path) {
-        window.location = '/api' + path;
+@code {
+  protected override async Task OnAfterRenderAsync(bool firstRender)
+  {
+    if (firstRender)
+    {
+      let path = window.location.pathname.replace('/', '');
+      if (path) {
+        await jsRuntime.InvokeVoidAsync('redirectToShorturl', path);
+      }
     }
-</script>
+  }
 }
